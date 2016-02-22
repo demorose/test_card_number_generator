@@ -15,8 +15,12 @@ while (strlen($number) < $length - 1) {
 $sum = 0;
 $reverseNumbers = str_split(strrev($number));
 foreach ($reverseNumbers as $key => $num) {
-    if (($key + 1) % 2 == 0) {
-        $sum += $num * 2;
+    if (($key + 1) % 2 != 0) {
+        if ($num * 2 < 10) {
+            $sum += $num * 2;
+        } else {
+            $sum += ($num * 2) - 9;
+        }
     } else {
         $sum += $num;
     }
