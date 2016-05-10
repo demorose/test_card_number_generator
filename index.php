@@ -26,6 +26,6 @@ foreach ($reverseNumbers as $key => $num) {
     }
 }
 
-$check = 10 - ($sum % 10);
+$check =( 10 - ($sum % 10)) % 10;
 $number .= $check;
 echo $number;
